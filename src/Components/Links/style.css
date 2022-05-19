@@ -1,0 +1,38 @@
+.HeaderLinks
+
+{
+background-color: #ed1d24;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+ align-content: center;
+}
+
+ .LINKS{
+
+text-decoration: none;
+
+padding: 10px;
+margin:10px;
+
+  }
+  .LINKS img {
+
+width: 100%;
+height: 90px;
+    
+      }
+
+
+  #comicsId
+
+  {
+font-style: italic;
+    background-color:#ed1d24;
+    font-size: 30px;
+font-weight: 900;
+padding: 20px;
+
+margin-top:200px;
+    color: white;
+  }

@@ -1,0 +1,24 @@
+/*  
+.MainImg
+
+{
+
+
+ 
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
+} */
+/* object-position: center center; */
+ 
+
+.HeroSec
+{
+
+    background-image: url("https://www.clementoni.com/media/prod/es/25718/marvel-avengers-104-piezas-supercolor-puzzle_IQZsIYb.jpg");
+
+
+height: 400px;
+
+background-repeat: no-repeat;
+}
