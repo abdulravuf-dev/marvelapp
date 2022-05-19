@@ -1,34 +1,53 @@
  
 import React from "react";
- import "./style.css"
-const Marvel = () => {
+import "./style.css"
+//  import axios from "axios";
+import Character from "../Character";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 
+ 
+ const Marvel = () => {
 
+    const [data, setData] = useState(null);
 
- const url1 =" https://www.clementoni.com/media/prod/es/25718/marvel-avengers-104-piezas-supercolor-puzzle_IQZsIYb.jpg"
+    useEffect(() => {
+      const fetchData = async () => {
+       const response = await axios.get(
+          "https://marvelbackend.herokuapp.com/characters"
+      );
+
+     
+        console.log("response.data", response.data.results);
+  
+        const modifiedData = response.data.results.splice(0, 50);
+  
+        setData(modifiedData);
+      };
+  
+  fetchData();
+    }, []);
+    // "http://hp-api.herokuapp.com/api/characters"
+    // "https://marvelbackend.herokuapp.com/characters"
+ 
     return (
  <div>
-{/* <img className="MainImg" src={url1} />
  
-<input className="Search" type={"text"}/> 
 
- <div>
+<div className="HeroSec" > 
+<p>  my new para </p>
+ 
+</div>
+ 
+<div>  
 
+ {data !== null ? <Character data={data} /> : null}     
+ 
+ 
+  {/* {data !== null ? <Character data={data} /> :  data.thumbnail.path === "http://i.annihil.us/u/prod/marvel/i/mg/a/f0/5202887448860"? }     */}  
+</div>
  </div>
- */}
-
-<div className="HeroSec" > </div>
-
-
- </div>
-
-
-
-
-
-
-
 
 
 );

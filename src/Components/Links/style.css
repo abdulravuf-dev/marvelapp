@@ -16,23 +16,30 @@ padding: 10px;
 margin:10px;
 
   }
-  .LINKS img {
+    .LINKS img {
 
-width: 100%;
+width: 200px;
 height: 90px;
-    
-      }
+    max-width: 100%;
+    margin: 20px;
+      } 
 
 
-  #comicsId
+  /* #comicsId img
 
   {
 font-style: italic;
     background-color:#ed1d24;
-    font-size: 30px;
-font-weight: 900;
-padding: 20px;
+    font-size: 10px;
+    width: 100px;
+    height: 90px; 
+    }
 
-margin-top:200px;
-    color: white;
-  }
+    #characterId
+    {
+      font-style: italic;
+          background-color:#ed1d24;
+          font-size: 10px;
+          width: 100px;
+          height: 90px; 
+          } */

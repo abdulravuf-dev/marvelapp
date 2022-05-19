@@ -1,14 +1,29 @@
  
 import React from "react";
- 
-const Character = () => {
+ import Cards from "../Cards"; 
 
- 
+  import './style.css'
+
+const Character = (props) => {  
     return (
- <div>
+      <div className="CharactersContainer">
+        {props.data.map((character) => {
+          return <Cards name={character.name} imageUrl={   character.thumbnail.path +
+            "." +    character.thumbnail.extension } />;
+        })}
+      </div>
+    );
 
-<p>char working  </p>
- </div>
-);
-};
+
+
+
+
+
+
+
+
+
+  };
 export default Character;
+
+ 
