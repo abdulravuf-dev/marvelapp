@@ -30,4 +30,28 @@ width: 100vw;
 
  }
 
- 
+ .HeroSec input  {
+
+
+    width:30%;
+    height: auto;
+font-size: 35px;
+opacity: 0.9;
+color: red;
+ background-color: black;
+ border-color: black;
+align-items: center;
+
+
+
+}
+
+.displayData img
+
+{
+width: 300px;
+height: 300px;
+display: flex;
+align-content: center;
+  
+}
