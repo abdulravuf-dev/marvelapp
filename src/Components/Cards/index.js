@@ -1,52 +1,50 @@
  
-import React from "react";
- 
-import './style.css'
-import { useState } from "react";
- 
+  import React from "react";
   
-  const Cards = (props) => {
- 
- const [show,setShow]=useState(false)
-    return (
-      <>
-      <div className="card" onClick={()=>{
-        setShow(true)
-      }}>
+  import './style.css'
+  import { useState } from "react";
+  
+    
+    const Cards = (props) => {
+  
+  const [show,setShow]=useState(false)
+      return (
+        <>
+        <div className="card" onClick={()=>{  
+          setShow(true)
+        }}> 
+  
+        <img src={props.imageUrl} />  
 
-        <img src={props.imageUrl} />
+  <span className="legend"> {props.name} </span>  
+
+        </div>
+
+
+  {show === true ? ( 
+        <div className="displayData" onClick={()=>{
+          setShow(false)
+        }}  >
         
-        <span className="legend"> {props.name} </span>
-      </div>
+        <img src={props.imageUrl}/>
+    {/* <img src={props.imageUrl3}/>    */}
 
+    <div className="displayDataChild" >
+    <span className="charactername" > {props.name} </span>  
+        <span > {props.imageUrl2} </span>  
+ 
 
-{show === true ? ( 
-      <div className="displayData" onClick={()=>{
-        setShow(false)
-      }}  >
-       
-      <img src={props.imageUrl}/>
-     <img src={props.imageUrl2}/> 
-      
-       <span > {props.imageUrl2} </span>  
+ 
+        </div>
+        
+        </div>) :null}
+        </>
+      );
+    };
+    
+    
 
-      <h1>hello</h1>
-      
-      </div>) :null}
-      </>
-    );
-  };
-  
-  
-
-
-
-export default Cards;
-
-
-
-
-
+  export default Cards;
 
 
 
